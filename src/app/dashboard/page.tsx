@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Layout from '@/components/Layout';
 import PetCard from '@/components/PetCard';
+import { useFavorites } from '@/contexts/FavoritesContext';
 import { apiService } from '@/lib/api';
 import AlertService from '@/lib/alert';
 import { useAuth } from '@/hooks/useAuth';
@@ -12,6 +13,7 @@ import type { Pet } from '@/lib/types';
 export default function DashboardPage() {
   const router = useRouter();
   const { user, isLoading: authLoading } = useAuth();
+  const { favoritedPetIds } = useFavorites();
   const [favorites, setFavorites] = useState<Pet[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -41,6 +43,9 @@ export default function DashboardPage() {
     }
   }, [user, authLoading, router]);
 
+  // Filter favorites list based on global favorites context
+  const filteredFavorites = favorites.filter((pet) => favoritedPetIds.has(pet.id));
+
   const handleDelete = (petId: string) => {
     setFavorites((prev) => prev.filter((pet) => pet.id !== petId));
   };
@@ -65,16 +70,16 @@ export default function DashboardPage() {
         </div>
 
         {/* Favorites Grid */}
-        {favorites.length > 0 ? (
+        {filteredFavorites.length > 0 ? (
           <>
             <div className="mb-8">
               <p className="text-gray-600">
-                Anda memiliki <span className="font-bold text-primary">{favorites.length}</span> hewan favorit
+                Anda memiliki <span className="font-bold text-primary">{filteredFavorites.length}</span> hewan favorit
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {favorites.map((pet) => (
+              {filteredFavorites.map((pet) => (
                 <div key={pet.id} className="animate-fade-in">
                   <PetCard pet={pet} onDelete={handleDelete} />
                 </div>

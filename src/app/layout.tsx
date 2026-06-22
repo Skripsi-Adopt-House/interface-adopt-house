@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
+import { FavoritesProvider } from '@/contexts/FavoritesContext';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -31,7 +32,9 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${inter.variable} ${montserrat.variable} h-full antialiased`}>
       <body className="min-h-screen flex flex-col bg-neutral-bg font-sans">
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <FavoritesProvider>{children}</FavoritesProvider>
+        </AuthProvider>
       </body>
     </html>
   );

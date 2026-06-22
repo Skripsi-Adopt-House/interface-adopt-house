@@ -69,12 +69,6 @@ export default function ProfilePage() {
                   <label className="block text-sm font-semibold text-gray-600 mb-1">Nama Lengkap</label>
                   <p className="px-4 py-3 bg-neutral-bg rounded-lg text-gray-900">{user.name}</p>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-600 mb-1">Tipe Akun</label>
-                  <p className="px-4 py-3 bg-neutral-bg rounded-lg text-gray-900">
-                    {user.is_admin ? 'Administrator' : 'Pengguna Reguler'}
-                  </p>
-                </div>
               </div>
             </div>
 

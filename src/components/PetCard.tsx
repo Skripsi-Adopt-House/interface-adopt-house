@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
+import { useFavorites } from '@/contexts/FavoritesContext';
 import { apiService } from '@/lib/api';
 import AlertService from '@/lib/alert';
 import type { Pet } from '@/lib/types';
@@ -12,13 +13,16 @@ interface PetCardProps {
   pet: Pet;
   onDelete?: (id: string) => void;
   onEdit?: (pet: Pet) => void;
+  onFavoriteToggle?: (id: string, isFavorited: boolean) => void;
   isAdmin?: boolean;
 }
 
-export default function PetCard({ pet, onDelete, onEdit, isAdmin = false }: PetCardProps) {
+export default function PetCard({ pet, onDelete, onEdit, onFavoriteToggle, isAdmin = false }: PetCardProps) {
   const { user } = useAuth();
-  const [isFavorited, setIsFavorited] = useState(false);
+  const { isFavorited, toggleFavorite } = useFavorites();
   const [isLoading, setIsLoading] = useState(false);
+
+  const petIsFavorited = isFavorited(pet.id);
 
   const handleDelete = async () => {
     const result = await AlertService.confirm(
@@ -50,13 +54,15 @@ export default function PetCard({ pet, onDelete, onEdit, isAdmin = false }: PetC
 
     setIsLoading(true);
     try {
-      if (isFavorited) {
+      if (petIsFavorited) {
         await apiService.removeFromFavorites(pet.id);
-        setIsFavorited(false);
+        toggleFavorite(pet.id, false);
+        onFavoriteToggle?.(pet.id, false);
         AlertService.toast('Dihapus dari favorit', 'success');
       } else {
         await apiService.addToFavorites(pet.id);
-        setIsFavorited(true);
+        toggleFavorite(pet.id, true);
+        onFavoriteToggle?.(pet.id, true);
         AlertService.toast('Ditambahkan ke favorit', 'success');
       }
     } catch (error: any) {
@@ -103,20 +109,18 @@ export default function PetCard({ pet, onDelete, onEdit, isAdmin = false }: PetC
         </p>
 
         {/* Health Info */}
-        {pet.health && (
-          <div className="flex gap-2 mb-4 text-xs flex-wrap">
-            {pet.health.vaksin ? (
-              <span className="bg-soft-highlight text-gray-700 px-3 py-1 rounded-full font-semibold">✓ Divaksinasi</span>
-            ) : (
-              <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold">✗ Tidak Divaksinasi</span>
-            )}
-            {pet.health.sertifikat ? (
-              <span className="bg-soft-highlight text-gray-700 px-3 py-1 rounded-full font-semibold">✓ Tersertifikasi</span>
-            ) : (
-              <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold">✗ Tidak Tersertifikasi</span>
-            )}
-          </div>
-        )}
+        <div className="flex gap-2 mb-4 text-xs flex-wrap">
+          {pet.health?.vaksin ? (
+            <span className="bg-soft-highlight text-gray-700 px-3 py-1 rounded-full font-semibold">✓ Divaksinasi</span>
+          ) : (
+            <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold">✗ Tidak Divaksinasi</span>
+          )}
+          {pet.health?.sertifikat ? (
+            <span className="bg-soft-highlight text-gray-700 px-3 py-1 rounded-full font-semibold">✓ Tersertifikasi</span>
+          ) : (
+            <span className="bg-red-100 text-red-700 px-3 py-1 rounded-full font-semibold">✗ Tidak Tersertifikasi</span>
+          )}
+        </div>
 
         {/* Actions */}
         <div className="flex gap-2">
@@ -146,14 +150,17 @@ export default function PetCard({ pet, onDelete, onEdit, isAdmin = false }: PetC
               </Link>
               <button
                 onClick={handleToggleFavorite}
-                className={`flex-1 px-4 py-2 rounded-lg font-semibold transition-colors text-sm ${
-                  isFavorited
-                    ? 'bg-red-500 text-white hover:bg-red-600'
-                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                className={`flex-1 flex items-center justify-center px-4 py-3 rounded-lg font-semibold transition-all text-sm ${
+                  petIsFavorited
+                    ? 'bg-red-50 hover:bg-red-100'
+                    : 'bg-gray-100 hover:bg-gray-200'
                 }`}
                 disabled={isLoading}
+                title={petIsFavorited ? 'Hapus dari favorit' : 'Tambah ke favorit'}
               >
-                {isFavorited ? '❤️ Favorit' : '🤍 Favorit'}
+                <i className={`fa-${petIsFavorited ? 'solid' : 'regular'} fa-heart text-xl ${
+                  petIsFavorited ? 'text-red-500' : 'text-gray-400'
+                }`}></i>
               </button>
             </>
           )}

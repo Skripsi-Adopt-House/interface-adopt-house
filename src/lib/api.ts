@@ -160,6 +160,39 @@ class ApiService {
     return response.data;
   }
 
+  // Helper method to check if a pet is favorited (more reliable)
+  async isFavorited(postingId: string): Promise<boolean> {
+    try {
+      const response = await this.checkIsFavorited(postingId);
+      
+      // If response itself is falsy, return false
+      if (!response) {
+        return false;
+      }
+
+      // Check if response has data property
+      if (!response.data) {
+        return false;
+      }
+
+      // If data is an array, check if it has items
+      if (Array.isArray(response.data)) {
+        return response.data.length > 0;
+      }
+
+      // If data is an object, check if it has valid id property (valid Favorite object)
+      if (typeof response.data === 'object' && response.data !== null) {
+        return 'id' in response.data && !!response.data.id;
+      }
+
+      return false;
+    } catch (error: any) {
+      // If error occurs (e.g., 404), it's not favorited
+      // console.log('isFavorited error:', error.message);
+      return false;
+    }
+  }
+
   async addToFavorites(postingId: string): Promise<FavoritesResponse> {
     const response = await this.api.post<FavoritesResponse>('/favorites', {
       posting_id: postingId,

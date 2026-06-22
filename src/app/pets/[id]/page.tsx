@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import { apiService } from '@/lib/api';
+import { useFavorites } from '@/contexts/FavoritesContext';
 import AlertService from '@/lib/alert';
 import { useAuth } from '@/hooks/useAuth';
 import type { Pet } from '@/lib/types';
@@ -18,10 +19,12 @@ interface PetDetailPageProps {
 export default function PetDetailPage({ params }: PetDetailPageProps) {
   const resolvedParams = use(params);
   const { user } = useAuth();
+  const { isFavorited, toggleFavorite } = useFavorites();
   const [pet, setPet] = useState<Pet | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isFavorited, setIsFavorited] = useState(false);
+
+  const petIsFavorited = pet ? isFavorited(pet.id) : false;
 
   useEffect(() => {
     const fetchPet = async () => {
@@ -30,16 +33,6 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
         const response = await apiService.getPetById(resolvedParams.id);
         if (response.data) {
           setPet(response.data);
-        }
-
-        // Check if favorited
-        if (user && !user.is_admin) {
-          try {
-            await apiService.checkIsFavorited(resolvedParams.id);
-            setIsFavorited(true);
-          } catch {
-            setIsFavorited(false);
-          }
         }
       } catch (error: any) {
         AlertService.error('Error', 'Failed to load pet details');
@@ -72,17 +65,17 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
     }
 
     try {
-      if (isFavorited) {
+      if (petIsFavorited) {
         await apiService.removeFromFavorites(pet!.id);
-        setIsFavorited(false);
+        toggleFavorite(pet!.id, false);
         AlertService.toast('Dihapus dari favorit', 'success');
       } else {
         await apiService.addToFavorites(pet!.id);
-        setIsFavorited(true);
+        toggleFavorite(pet!.id, true);
         AlertService.toast('Ditambahkan ke favorit', 'success');
       }
     } catch (error: any) {
-      AlertService.error('Error', error.response?.data?.message || 'Failed to update favorite');
+      AlertService.error('Error', error.response?.data?.message || 'Gagal mengupdate favorit');
     }
   };
 
@@ -247,12 +240,12 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
                 <button
                   onClick={handleToggleFavorite}
                   className={`w-full px-6 py-3 rounded-xl font-semibold transition-all ${
-                    isFavorited
+                    petIsFavorited
                       ? 'bg-red-500 text-white hover:bg-red-600'
                       : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                   }`}
                 >
-                  {isFavorited ? '❤️ Disukainya' : '🤍 Tambah ke Favorit'}
+                  {petIsFavorited ? '❤️ Disukainya' : '🤍 Tambah ke Favorit'}
                 </button>
                 <button className="w-full px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity">
                   Hubungi Pemilik
