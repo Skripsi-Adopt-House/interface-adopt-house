@@ -211,7 +211,14 @@ class ApiService {
 
   private setToken(token: string): void {
     if (typeof window !== 'undefined') {
+      // Store in localStorage for client-side access
       localStorage.setItem('authToken', token);
+      
+      // Also store in cookies for middleware access
+      // Set expiry to 7 days (matches backend JWT expiry)
+      const expiryDate = new Date();
+      expiryDate.setDate(expiryDate.getDate() + 7);
+      document.cookie = `auth_token=${token}; path=/; expires=${expiryDate.toUTCString()}; SameSite=Strict`;
     }
   }
 
@@ -225,6 +232,9 @@ class ApiService {
   private _clearToken(): void {
     if (typeof window !== 'undefined') {
       localStorage.removeItem('authToken');
+      
+      // Clear cookies as well
+      document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict';
     }
   }
 
