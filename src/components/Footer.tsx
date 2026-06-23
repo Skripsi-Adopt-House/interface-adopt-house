@@ -52,17 +52,17 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Sumber Daya</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Panduan Perawatan Hewan
+                <Link href="/panduan-perawatan" className="text-gray-400 hover:text-white transition-colors">
+                  Panduan Perawatan
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/faq" className="text-gray-400 hover:text-white transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/hubungi-kami" className="text-gray-400 hover:text-white transition-colors">
                   Hubungi Kami
                 </Link>
               </li>
@@ -74,12 +74,12 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Hukum</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/kebijakan-privasi" className="text-gray-400 hover:text-white transition-colors">
                   Kebijakan Privasi
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/syarat-layanan" className="text-gray-400 hover:text-white transition-colors">
                   Syarat Layanan
                 </Link>
               </li>

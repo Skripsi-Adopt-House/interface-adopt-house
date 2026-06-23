@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`${inter.variable} ${montserrat.variable} h-full antialiased`}>
-      <body className="min-h-screen flex flex-col bg-neutral-bg font-sans">
+      <body className="min-h-screen flex flex-col bg-neutral-bg font-sans" suppressHydrationWarning>
         <AuthProvider>
           <FavoritesProvider>{children}</FavoritesProvider>
         </AuthProvider>
