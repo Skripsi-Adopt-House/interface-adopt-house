@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: 'adopsi hewan peliharaan, anjing, kucing, hewan, penyelamatan',
   viewport: 'width=device-width, initial-scale=1',
   icons: {
-    icon: '/logo.webp',
+    icon: '/logo1.webp',
   },  
 };
 
