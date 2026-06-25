@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         ) : pets.length > 0 ? (
           <>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
               {pets.map((pet) => (
                 <div key={pet.id} className="animate-fade-in">
                   <PetCard pet={pet} />
