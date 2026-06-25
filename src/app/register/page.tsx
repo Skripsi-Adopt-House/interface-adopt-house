@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import Layout from '@/components/Layout';
 import { useAuth } from '@/hooks/useAuth';
@@ -91,7 +92,9 @@ export default function RegisterPage() {
           <div className="bg-white rounded-2xl shadow-lg p-8 animate-slide-in-up">
             {/* Header */}
             <div className="text-center mb-8">
-              <div className="text-4xl mb-3">🏠</div>
+              <div className="mb-3 flex justify-center">
+                <Image src="/logo1.webp" alt="Melodi Kucing Logo" width={100} height={100} className="object-contain" />
+              </div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Buat Akun</h1>
               <p className="text-gray-600">Bergabunglah dengan Melodi Kucing dan temukan hewan peliharaan sempurna Anda</p>
             </div>

@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -30,7 +31,9 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="bg-gradient-to-br from-secondary to-accent rounded-2xl p-8 text-center">
-            <div className="text-6xl mb-4">🏠</div>
+            <div className="mb-4 flex justify-center">
+              <Image src="/logo1.webp" alt="Melodi Kucing Logo" width={100} height={100} className="object-contain" />
+            </div>
             <p className="text-gray-900 text-lg font-semibold">Membuat Adopsi Hewan Sederhana</p>
           </div>
         </div>
