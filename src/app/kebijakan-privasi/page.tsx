@@ -22,7 +22,7 @@ export default function KebijakanPrivasiPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">1. Pendahuluan</h2>
             <p className="leading-relaxed">
-              Adopt House ("kami," "kami," atau "Perusahaan") berkomitmen untuk melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan menjaga informasi Anda ketika Anda mengunjungi situs web kami (website dan aplikasi mobile kami, secara kolektif, "Situs") dan menggunakan layanan kami.
+              Melodi Kucing ("kami," "kami," atau "Perusahaan") berkomitmen untuk melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan menjaga informasi Anda ketika Anda mengunjungi situs web kami (website dan aplikasi mobile kami, secara kolektif, "Situs") dan menggunakan layanan kami.
             </p>
             <p className="leading-relaxed">
               Harap baca Kebijakan Privasi ini dengan hati-hati. Jika Anda tidak setuju dengan kebijakan kami, silakan jangan menggunakan Situs kami atau layanan kami.
@@ -94,7 +94,7 @@ export default function KebijakanPrivasiPage() {
               <li><strong>Mitra Adopsi:</strong> Dengan administrator hewan peliharaan dan klinik veteriner sebagai bagian dari proses adopsi</li>
               <li><strong>Kewajiban Hukum:</strong> Jika diwajibkan oleh hukum, keputusan pengadilan, atau otoritas pemerintah</li>
               <li><strong>Perlindungan Hak:</strong> Jika diperlukan untuk melindungi, menegakkan, atau menerapkan perjanjian dan hak kami</li>
-              <li><strong>Akuisisi Bisnis:</strong> Jika Adopt House dijual, digabung, atau diakuisisi, informasi Anda mungkin akan ditransfer</li>
+              <li><strong>Akuisisi Bisnis:</strong> Jika Melodi Kucing dijual, digabung, atau diakuisisi, informasi Anda mungkin akan ditransfer</li>
             </ul>
           </section>
 
@@ -183,10 +183,10 @@ export default function KebijakanPrivasiPage() {
               Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau praktik privasi kami, silakan hubungi kami:
             </p>
             <div className="bg-gray-100 p-6 rounded-lg mt-4">
-              <p><strong>Adopt House</strong></p>
-              <p>Email: privacy@adopthouse.com</p>
-              <p>Telepon: (021) 1234-5678</p>
-              <p>Alamat: Jl. Hewan Peliharaan No. 123, Jakarta Selatan</p>
+              <p><strong>Yayasan Melodi Kucing</strong></p>
+              <p>Email: yayasanmelodikucing@gmail.com</p>
+              <p>Telepon: (+62) 813-1120-3475</p>
+              <p>Alamat: Jalan Kelapa Peon No. 99, RT.003/RW.004, Kelurahan Kebagusan, Kecamatan Pasar Minggu, Kota Jakarta Selatan, Daerah Khusus Ibu Kota Jakarta, Indonesia, 12520.</p>
             </div>
           </section>
         </div>

@@ -1,6 +1,6 @@
-# 🚀 Vercel Deployment Guide - Adopt House
+# 🚀 Vercel Deployment Guide - Melodi Kucing
 
-Panduan lengkap untuk deploy Adopt House ke Vercel dengan konfigurasi optimal.
+Panduan lengkap untuk deploy Melodi Kucing ke Vercel dengan konfigurasi optimal.
 
 ---
 

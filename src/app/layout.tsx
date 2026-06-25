@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Adopt House - Temukan Hewan Peliharaan Sempurna Anda',
+  title: 'Melodi Kucing - Temukan Hewan Peliharaan Sempurna Anda',
   description: 'Platform adopsi hewan peliharaan modern untuk menemukan dan mengadopsi teman sempurna Anda.',
   keywords: 'adopsi hewan peliharaan, anjing, kucing, hewan, penyelamatan',
   viewport: 'width=device-width, initial-scale=1',

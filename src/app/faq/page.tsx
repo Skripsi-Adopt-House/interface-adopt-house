@@ -15,7 +15,7 @@ const faqs: FAQItem[] = [
   {
     id: 1,
     category: 'Adopsi',
-    question: 'Apa persyaratan untuk mengadopsi hewan dari Adopt House?',
+    question: 'Apa persyaratan untuk mengadopsi hewan dari Melodi Kucing?',
     answer: 'Untuk mengadopsi, Anda harus berusia minimal 18 tahun, memiliki akun terverifikasi, dan bersedia menjalani proses wawancara singkat. Kami ingin memastikan setiap hewan mendapat rumah yang tepat dan pemilik yang bertanggung jawab. Beberapa hewan khusus mungkin memiliki persyaratan tambahan berdasarkan kebutuhan mereka.'
   },
   {
@@ -81,8 +81,8 @@ const faqs: FAQItem[] = [
   {
     id: 12,
     category: 'Layanan',
-    question: 'Apakah Adopt House menawarkan layanan grooming atau boarding?',
-    answer: 'Saat ini Adopt House fokus pada layanan adopsi. Namun, kami memiliki kemitraan dengan beberapa grooming dan boarding facility terpercaya yang bisa kami rekomendasikan. Hubungi kami untuk referensi.'
+    question: 'Apakah Melodi Kucing menawarkan layanan grooming atau boarding?',
+    answer: 'Saat ini Melodi Kucing fokus pada layanan adopsi. Namun, kami memiliki kemitraan dengan beberapa grooming dan boarding facility terpercaya yang bisa kami rekomendasikan. Hubungi kami untuk referensi.'
   },
   {
     id: 13,
@@ -93,7 +93,7 @@ const faqs: FAQItem[] = [
   {
     id: 14,
     category: 'Layanan',
-    question: 'Bagaimana cara menghubungi Adopt House untuk pertanyaan lebih lanjut?',
+    question: 'Bagaimana cara menghubungi Melodi Kucing untuk pertanyaan lebih lanjut?',
     answer: 'Anda bisa menghubungi kami melalui halaman "Hubungi Kami" di website, email, telepon, atau media sosial. Tim kami siap membantu dengan pertanyaan atau masalah apa pun. Biasanya kami merespon dalam 24 jam.'
   }
 ];

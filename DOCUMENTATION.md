@@ -1,4 +1,4 @@
-# 🏠 Adopt House - Frontend Documentation
+# 🏠 Melodi Kucing - Frontend Documentation
 
 Modern pet adoption platform built with Next.js, TypeScript, Tailwind CSS, and SweetAlert2.
 
@@ -17,7 +17,7 @@ npm install
 # Configure environment
 # .env.local is already set up with:
 # NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
-# NEXT_PUBLIC_APP_NAME=Adopt House
+# NEXT_PUBLIC_APP_NAME=Melodi Kucing
 
 # Development server
 npm run dev
@@ -190,7 +190,7 @@ src/
 ### Environment Variables for Production
 ```
 NEXT_PUBLIC_API_BASE_URL=https://your-api-domain.com/api
-NEXT_PUBLIC_APP_NAME=Adopt House
+NEXT_PUBLIC_APP_NAME=Melodi Kucing
 ```
 
 ### Build & Deploy

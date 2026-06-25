@@ -76,19 +76,19 @@ export default function HubungiKamiPage() {
     {
       icon: '📞',
       title: 'Telepon',
-      content: '(021) 1234-5678',
+      content: '(+62) 813-1120-3475',
       subtext: 'Senin - Jumat, 09:00 - 17:00'
     },
     {
       icon: '📧',
       title: 'Email',
-      content: 'info@adopthouse.com',
+      content: 'yayasanmelodikucing@gmail.com',
       subtext: 'Respons dalam 24 jam'
     },
     {
       icon: '📍',
       title: 'Alamat',
-      content: 'Jl. Hewan Peliharaan No. 123',
+      content: 'Jalan Kelapa Peon No. 99, RT.003/RW.004, Kelurahan Kebagusan, Kecamatan Pasar Minggu, Kota Jakarta Selatan, Daerah Khusus Ibu Kota Jakarta, Indonesia, 12520.',
       subtext: 'Jakarta Selatan, Indonesia'
     },
     {
@@ -101,9 +101,9 @@ export default function HubungiKamiPage() {
 
   const socialLinks = [
     { icon: '📱', name: 'Instagram', handle: '@adopthouseid', link: '#' },
-    { icon: '👍', name: 'Facebook', handle: 'Adopt House Indonesia', link: '#' },
+    { icon: '👍', name: 'Facebook', handle: 'Melodi Kucing Indonesia', link: '#' },
     { icon: '🐦', name: 'Twitter', handle: '@adopthouse_id', link: '#' },
-    { icon: '▶️', name: 'YouTube', handle: 'Adopt House Channel', link: '#' }
+    { icon: '▶️', name: 'YouTube', handle: 'Melodi Kucing Channel', link: '#' }
   ];
 
   return (
@@ -271,7 +271,7 @@ export default function HubungiKamiPage() {
             <div className="text-center">
               <p className="text-4xl mb-4">📍</p>
               <p className="text-gray-700 font-semibold">
-                Jl. Hewan Peliharaan No. 123, Jakarta Selatan
+                Jalan Kelapa Peon No. 99, RT.003/RW.004, Kelurahan Kebagusan, Kecamatan Pasar Minggu, Kota Jakarta Selatan, Daerah Khusus Ibu Kota Jakarta, Indonesia, 12520.
               </p>
               <p className="text-gray-600 mt-2">
                 Hubungi kami untuk petunjuk arah atau kunjungan

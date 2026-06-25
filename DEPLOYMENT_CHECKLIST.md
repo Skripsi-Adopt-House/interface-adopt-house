@@ -1,4 +1,4 @@
-# 📋 Quick Deployment Checklist - Adopt House
+# 📋 Quick Deployment Checklist - Melodi Kucing
 
 Referensi cepat untuk melakukan deployment production.
 

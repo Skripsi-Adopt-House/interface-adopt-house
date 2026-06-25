@@ -65,13 +65,13 @@ export default function Navbar() {
           className="text-2xl font-bold text-primary flex items-center gap-2"
         >
           <Image 
-            src="/logo.webp" 
-            alt="Adopt House Logo"
+            src="/logo1.webp" 
+            alt="Melodi Kucing Logo"
             width={40}
             height={40}
             className="object-contain"
           />
-          Adopt House
+          Melodi Kucing
         </Link>
 
         {/* Hamburger Menu Button */}

@@ -96,7 +96,7 @@ function PetsContent() {
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="container mx-auto px-2 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar Filters */}
           <div className="lg:col-span-1">
@@ -186,7 +186,7 @@ function PetsContent() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
                   {displayedPets.map((pet) => (
                     <PetCard key={pet.id} pet={pet} />
                   ))}

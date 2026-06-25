@@ -7,7 +7,7 @@ export default function AboutPage() {
       {/* Header Section */}
       <section className="bg-gradient-to-r from-secondary via-accent to-soft-highlight py-16">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tentang Adopt House</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tentang Melodi Kucing</h1>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
             Kami memiliki misi untuk mencocokkan setiap hewan dengan rumah sempurna mereka
           </p>
@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Kisah Kami</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Adopt House didirikan dengan misi sederhana: membuat adopsi hewan lebih mudah dan dapat diakses oleh semua orang. Kami percaya bahwa setiap hewan layak mendapatkan rumah yang penuh kasih, dan setiap keluarga layak mendapatkan teman yang sempurna.
+              Melodi Kucing didirikan dengan misi sederhana: membuat adopsi hewan lebih mudah dan dapat diakses oleh semua orang. Kami percaya bahwa setiap hewan layak mendapatkan rumah yang penuh kasih, dan setiap keluarga layak mendapatkan teman yang sempurna.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Sejak peluncuran kami, kami telah membantu ribuan hewan menemukan rumah selamanya. Platform kami menghubungkan pecinta hewan yang peduli dengan hewan peliharaan yang menggemaskan yang menunggu kesempatan kedua untuk bahagia.
@@ -96,7 +96,7 @@ export default function AboutPage() {
           <div className="text-center">
             <p className="text-gray-600 mb-8">Pelajari lebih lanjut tentang tim kami dan pekerjaan kami</p>
             <Link
-              href="mailto:team@adopthouse.com"
+              href="/hubungi-kami"
               className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity inline-block"
             >
               Hubungi Kami
@@ -109,7 +109,7 @@ export default function AboutPage() {
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Siap Menemukan Hewan Peliharaan Sempurna Anda?</h2>
-          <p className="text-lg mb-8 opacity-90">Bergabunglah dengan ribuan keluarga bahagia yang telah menemukan teman mereka melalui Adopt House</p>
+          <p className="text-lg mb-8 opacity-90">Bergabunglah dengan ribuan keluarga bahagia yang telah menemukan teman mereka melalui Melodi Kucing</p>
           <Link
             href="/pets"
             className="inline-block bg-white text-primary px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity"

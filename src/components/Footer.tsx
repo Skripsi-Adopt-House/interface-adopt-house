@@ -12,13 +12,13 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
               <Image 
-                src="/logo.webp" 
-                alt="Adopt House Logo"
+                src="/logo1.webp" 
+                alt="Melodi Kucing Logo"
                 width={32}
                 height={32}
                 className="object-contain"
               />
-              Adopt House
+              Melodi Kucing
             </h3>
             <p className="text-gray-400">
               Temukan teman berbulu Anda yang sempurna dan berikan mereka rumah yang penuh kasih.
@@ -89,7 +89,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 pt-8">
           <p className="text-center text-gray-400">
-            &copy; {currentYear} Adopt House. Semua hak dilindungi. | Dibuat dengan ❤️ untuk hewan
+            &copy; {currentYear} Melodi Kucing. Semua hak dilindungi. | Dibuat dengan ❤️ untuk hewan
           </p>
         </div>
       </div>

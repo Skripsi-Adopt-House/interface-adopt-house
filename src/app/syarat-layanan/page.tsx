@@ -22,7 +22,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">1. Penerimaan Syarat-Syarat</h2>
             <p className="leading-relaxed">
-              Dengan mengakses dan menggunakan situs web Adopt House (website dan aplikasi mobile, secara kolektif, "Situs") serta layanannya ("Layanan"), Anda menyetujui untuk terikat oleh Syarat dan Ketentuan Layanan ini ("Perjanjian"). Jika Anda tidak setuju dengan salah satu bagian dari perjanjian ini, maka Anda tidak memiliki hak untuk menggunakan Situs atau Layanan kami.
+              Dengan mengakses dan menggunakan situs web Melodi Kucing (website dan aplikasi mobile, secara kolektif, "Situs") serta layanannya ("Layanan"), Anda menyetujui untuk terikat oleh Syarat dan Ketentuan Layanan ini ("Perjanjian"). Jika Anda tidak setuju dengan salah satu bagian dari perjanjian ini, maka Anda tidak memiliki hak untuk menggunakan Situs atau Layanan kami.
             </p>
           </section>
 
@@ -30,7 +30,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">2. Lisensi dan Penggunaan yang Diizinkan</h2>
             <p className="leading-relaxed mb-4">
-              Adopt House memberikan Anda lisensi terbatas, non-eksklusif, tidak dapat dialihkan, dan dapat dicabut untuk mengakses dan menggunakan Situs dan Layanan untuk tujuan pribadi, tidak komersial. Penggunaan Anda dibatasi oleh ketentuan berikut:
+              Melodi Kucing memberikan Anda lisensi terbatas, non-eksklusif, tidak dapat dialihkan, dan dapat dicabut untuk mengakses dan menggunakan Situs dan Layanan untuk tujuan pribadi, tidak komersial. Penggunaan Anda dibatasi oleh ketentuan berikut:
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li>Anda tidak boleh mereproduksi, mendistribusikan, atau mentransmisikan konten kami tanpa izin tertulis</li>
@@ -63,7 +63,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">4. Proses Adopsi</h2>
             <p className="leading-relaxed mb-4">
-              Adopt House menyediakan platform untuk menghubungkan calon pemilik dengan hewan peliharaan yang dapat diadopsi. Dengan mengajukan aplikasi adopsi, Anda menyatakan bahwa:
+              Melodi Kucing menyediakan platform untuk menghubungkan calon pemilik dengan hewan peliharaan yang dapat diadopsi. Dengan mengajukan aplikasi adopsi, Anda menyatakan bahwa:
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li>Anda berusia minimal 18 tahun</li>
@@ -73,7 +73,7 @@ export default function SyaratLayananPage() {
               <li>Anda akan mematuhi semua undang-undang perlindungan hewan yang berlaku</li>
             </ul>
             <p className="leading-relaxed mt-4">
-              Adopt House berhak untuk menolak aplikasi adopsi dan mengembalikan hewan jika kami menentukan bahwa rumah tidak sesuai. Kami tidak bertanggung jawab atas kesejahteraan hewan setelah adopsi.
+              Melodi Kucing berhak untuk menolak aplikasi adopsi dan mengembalikan hewan jika kami menentukan bahwa rumah tidak sesuai. Kami tidak bertanggung jawab atas kesejahteraan hewan setelah adopsi.
             </p>
           </section>
 
@@ -102,7 +102,7 @@ export default function SyaratLayananPage() {
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li>Mewakili bahwa Anda memiliki semua hak untuk konten tersebut</li>
-              <li>Memberikan Adopt House lisensi seumur hidup, royalti-gratis untuk menggunakan konten</li>
+              <li>Memberikan Melodi Kucing lisensi seumur hidup, royalti-gratis untuk menggunakan konten</li>
               <li>Menjamin bahwa konten tidak melanggar hak pihak ketiga</li>
               <li>Menerima bahwa konten dapat digunakan dalam kampanye pemasaran kami</li>
             </ul>
@@ -115,7 +115,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">7. Konten Pihak Ketiga</h2>
             <p className="leading-relaxed">
-              Situs kami mungkin berisi tautan ke situs web pihak ketiga dan konten yang tidak dimiliki atau dikendalikan oleh Adopt House. Kami tidak bertanggung jawab atas konten, akurasi, atau praktik pihak ketiga. Penggunaan Anda terhadap situs pihak ketiga tunduk pada syarat dan kebijakan privasi mereka.
+              Situs kami mungkin berisi tautan ke situs web pihak ketiga dan konten yang tidak dimiliki atau dikendalikan oleh Melodi Kucing. Kami tidak bertanggung jawab atas konten, akurasi, atau praktik pihak ketiga. Penggunaan Anda terhadap situs pihak ketiga tunduk pada syarat dan kebijakan privasi mereka.
             </p>
           </section>
 
@@ -123,7 +123,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">8. Jaminan Penolakan</h2>
             <p className="leading-relaxed">
-              SITUS DAN LAYANAN DISEDIAKAN ATAS DASAR "SEBAGAIMANA ADANYA" TANPA JAMINAN DARI SEGALA JENIS. ADOPT HOUSE MENOLAK SEMUA JAMINAN YANG DINYATAKAN ATAU TERSIRAT, TERMASUK JAMINAN KELAYAKAN UNTUK TUJUAN TERTENTU, TIDAK PELANGGARAN, DAN KEAKURATAN.
+              SITUS DAN LAYANAN DISEDIAKAN ATAS DASAR "SEBAGAIMANA ADANYA" TANPA JAMINAN DARI SEGALA JENIS. MELODI KUCING MENOLAK SEMUA JAMINAN YANG DINYATAKAN ATAU TERSIRAT, TERMASUK JAMINAN KELAYAKAN UNTUK TUJUAN TERTENTU, TIDAK PELANGGARAN, DAN KEAKURATAN.
             </p>
           </section>
 
@@ -131,7 +131,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">9. Pembatasan Tanggung Jawab</h2>
             <p className="leading-relaxed mb-4">
-              DALAM KEADAAN APA PUN, ADOPT HOUSE TIDAK BERTANGGUNG JAWAB ATAS:
+              DALAM KEADAAN APA PUN, MELODI KUCING TIDAK BERTANGGUNG JAWAB ATAS:
             </p>
             <ul className="list-disc list-inside space-y-2">
               <li>Kerusakan tidak langsung, insidental, khusus, atau hukuman</li>
@@ -140,7 +140,7 @@ export default function SyaratLayananPage() {
               <li>Akses tidak sah atau pengubahan transmisi atau data Anda</li>
             </ul>
             <p className="leading-relaxed mt-4">
-              Tanggung jawab keseluruhan Adopt House kepada Anda terbatas pada jumlah yang Anda bayarkan kepada kami, jika ada.
+              Tanggung jawab keseluruhan Melodi Kucing kepada Anda terbatas pada jumlah yang Anda bayarkan kepada kami, jika ada.
             </p>
           </section>
 
@@ -156,7 +156,7 @@ export default function SyaratLayananPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">11. Kebijakan Pengembalian 30 Hari</h2>
             <p className="leading-relaxed">
-              Adopt House menawarkan kebijakan pengembalian 30 hari tanpa pertanyaan. Jika Anda tidak puas dengan hewan yang diadopsi atau merasa bahwa kecocokan tidak tepat, Anda dapat mengembalikan hewan dalam 30 hari pertama untuk penghargaan penuh atau transfer ke hewan lain. Biaya pemrosesan mungkin berlaku.
+              Melodi Kucing menawarkan kebijakan pengembalian 30 hari tanpa pertanyaan. Jika Anda tidak puas dengan hewan yang diadopsi atau merasa bahwa kecocokan tidak tepat, Anda dapat mengembalikan hewan dalam 30 hari pertama untuk penghargaan penuh atau transfer ke hewan lain. Biaya pemrosesan mungkin berlaku.
             </p>
           </section>
 
@@ -199,10 +199,10 @@ export default function SyaratLayananPage() {
               Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, silakan hubungi kami:
             </p>
             <div className="bg-gray-100 p-6 rounded-lg mt-4">
-              <p><strong>Adopt House</strong></p>
-              <p>Email: legal@adopthouse.com</p>
-              <p>Telepon: (021) 1234-5678</p>
-              <p>Alamat: Jl. Hewan Peliharaan No. 123, Jakarta Selatan</p>
+              <p><strong>Yayasan Melodi Kucing</strong></p>
+              <p>Email: yayasanmelodikucing@gmail.com</p>
+              <p>Telepon: (+62) 813-1120-3475</p>
+              <p>Alamat: Jalan Kelapa Peon No. 99, RT.003/RW.004, Kelurahan Kebagusan, Kecamatan Pasar Minggu, Kota Jakarta Selatan, Daerah Khusus Ibu Kota Jakarta, Indonesia, 12520.</p>
             </div>
           </section>
 
@@ -210,7 +210,7 @@ export default function SyaratLayananPage() {
           <section className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mt-12">
             <p className="font-bold text-gray-900 mb-2">⚠️ PEMBERITAHUAN PENTING</p>
             <p className="text-gray-700">
-              Dengan menggunakan Adopt House, Anda menyetujui untuk menerima tanggung jawab penuh atas kesejahteraan hewan yang diadopsi. Anda berkomitmen untuk memberikan perawatan yang tepat, nutrisi yang sesuai, perlakuan yang manusiawi, dan perhatian medis. Adopt House berhak untuk menyelidiki pengaduan tentang perlakuan hewan yang kasar atau penyalahgunaan.
+              Dengan menggunakan Melodi Kucing, Anda menyetujui untuk menerima tanggung jawab penuh atas kesejahteraan hewan yang diadopsi. Anda berkomitmen untuk memberikan perawatan yang tepat, nutrisi yang sesuai, perlakuan yang manusiawi, dan perhatian medis. Melodi Kucing berhak untuk menyelidiki pengaduan tentang perlakuan hewan yang kasar atau penyalahgunaan.
             </p>
           </section>
         </div>

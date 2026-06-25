@@ -1,8 +1,8 @@
-# 🐾 Adopt House - Pet Adoption Platform
+# 🐾 Melodi Kucing - Pet Adoption Platform
 
 Platform adopsi hewan peliharaan modern dengan teknologi Next.js terkini. Menghubungkan calon pengadopsi dengan hewan peliharaan yang membutuhkan rumah baru.
 
-![Adopt House](https://img.shields.io/badge/Status-Production%20Ready-green?style=flat-square)
+![Melodi Kucing](https://img.shields.io/badge/Status-Production%20Ready-green?style=flat-square)
 ![Next.js](https://img.shields.io/badge/Next.js-16.2.4-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-19-blue?style=flat-square&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
@@ -540,7 +540,7 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 
 ### Follow Us
 - **Instagram:** @adoptehouse.id
-- **Facebook:** Adopt House Indonesia
+- **Facebook:** Melodi Kucing Indonesia
 - **Twitter:** @AdoptHouseID
 - **TikTok:** @adoptehouse.id
 
@@ -606,4 +606,4 @@ This project is licensed under the **MIT License** - see [LICENSE](LICENSE) file
 
 **Last Updated:** June 24, 2026  
 **Status:** Production Ready ✅  
-**Maintained By:** Adopt House Development Team
+**Maintained By:** Melodi Kucing Development Team

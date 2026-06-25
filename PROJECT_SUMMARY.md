@@ -1,4 +1,4 @@
-# 🐾 Adopt House - Project Summary
+# 🐾 Melodi Kucing - Project Summary
 
 **Pet Adoption Platform Frontend** | Built with Next.js 16.2.4 + TypeScript + Tailwind CSS
 
@@ -6,7 +6,7 @@
 
 ## 📋 Project Overview
 
-Adopt House adalah platform adopsi hewan peliharaan modern yang menghubungkan calon pemilik dengan hewan-hewan yang membutuhkan rumah. Aplikasi ini menyediakan interface yang user-friendly untuk browsing, favoriting, dan mengadopsi hewan peliharaan.
+Melodi Kucing adalah platform adopsi hewan peliharaan modern yang menghubungkan calon pemilik dengan hewan-hewan yang membutuhkan rumah. Aplikasi ini menyediakan interface yang user-friendly untuk browsing, favoriting, dan mengadopsi hewan peliharaan.
 
 **Live Port:** `http://localhost:3001`  
 **Backend API:** `http://localhost:3000/api`
@@ -491,7 +491,7 @@ v1.0.0  - Initial project setup
 
 ## 📄 License
 
-© 2026 Adopt House. All rights reserved.
+© 2026 Melodi Kucing. All rights reserved.
 
 ---
 
@@ -509,5 +509,5 @@ v1.0.0  - Initial project setup
 ---
 
 **Last Updated:** 23 Juni 2026  
-**Maintained By:** Adopt House Dev Team  
+**Maintained By:** Melodi Kucing Dev Team  
 **Status:** ✅ Production Ready

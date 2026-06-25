@@ -236,7 +236,7 @@ export default function EditPetPage() {
                     name="breed"
                     value={formData.breed}
                     onChange={handleInputChange}
-                    placeholder="mis., Golden Retriever"
+                    placeholder="mis., British Short Hair"
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                   />
                 </div>

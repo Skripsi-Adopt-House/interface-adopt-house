@@ -1,6 +1,6 @@
-# 📊 Activity Diagrams - Adopt House
+# 📊 Activity Diagrams - Melodi Kucing
 
-Dokumentasi alur aktivitas untuk fitur-fitur utama Adopt House menggunakan Mermaid State Diagram (UML Activity Style).
+Dokumentasi alur aktivitas untuk fitur-fitur utama Melodi Kucing menggunakan Mermaid State Diagram (UML Activity Style).
 
 ---
 
@@ -482,4 +482,4 @@ graph TD
 ---
 
 **Last Updated:** 23 Juni 2026  
-**Created By:** Adopt House Documentation Team
+**Created By:** Melodi Kucing Documentation Team

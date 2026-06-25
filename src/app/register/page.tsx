@@ -93,7 +93,7 @@ export default function RegisterPage() {
             <div className="text-center mb-8">
               <div className="text-4xl mb-3">🏠</div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Buat Akun</h1>
-              <p className="text-gray-600">Bergabunglah dengan Adopt House dan temukan hewan peliharaan sempurna Anda</p>
+              <p className="text-gray-600">Bergabunglah dengan Melodi Kucing dan temukan hewan peliharaan sempurna Anda</p>
             </div>
 
             {/* Form */}

@@ -1,5 +1,5 @@
 /**
- * Adopt House - TypeScript Type Definitions
+ * Melodi Kucing - TypeScript Type Definitions
  * Interfaces for all data models and API responses
  */
 

@@ -1,6 +1,6 @@
-# 🏗️ Adopt House Frontend - Development Progress
+# 🏗️ Melodi Kucing Frontend - Development Progress
 
-**Project:** Adopt House - Pet Adoption Platform  
+**Project:** Melodi Kucing - Pet Adoption Platform  
 **Tech Stack:** Next.js (App Router), TypeScript, Tailwind CSS, Flowbite, SweetAlert2  
 **Status:** ✅ Feature Complete (90% Ready for Testing)  
 **Start Date:** May 5, 2026  

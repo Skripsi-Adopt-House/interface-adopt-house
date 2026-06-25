@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Featured Pets Section */}
-      <section className="py-20 container mx-auto px-4">
+      <section className="py-20 container mx-auto px-2">
         <div className="text-center mb-12 animate-slide-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Hewan Unggulan</h2>
           <p className="text-gray-600 text-lg">Temui beberapa hewan luar biasa kami yang tersedia untuk diadopsi</p>
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         ) : pets.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               {pets.map((pet) => (
                 <div key={pet.id} className="animate-fade-in">
                   <PetCard pet={pet} />
@@ -149,7 +149,7 @@ export default function Home() {
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Siap Menemukan Hewan Peliharaan Sempurna Anda?</h2>
-          <p className="text-lg mb-8 opacity-90">Bergabunglah dengan ratusan pemilik hewan bahagia yang menemukan teman mereka melalui Adopt House</p>
+          <p className="text-lg mb-8 opacity-90">Bergabunglah dengan ratusan pemilik hewan bahagia yang menemukan teman mereka melalui Melodi Kucing</p>
           <Link href="/pets" className="inline-block bg-white text-primary px-8 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity">
             Mulai Sekarang →
           </Link>
