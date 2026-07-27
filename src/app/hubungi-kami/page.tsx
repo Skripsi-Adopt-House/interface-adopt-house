@@ -48,13 +48,23 @@ export default function HubungiKamiPage() {
 
     setIsSubmitting(true);
     try {
-      // Simulasi pengiriman pesan
-      // Dalam aplikasi nyata, ini akan mengirim ke backend
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      // Kirim pesan ke API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Gagal mengirim pesan');
+      }
+
       AlertService.success(
         'Terima Kasih!',
-        'Pesan Anda telah diterima. Tim kami akan menghubungi Anda dalam 24 jam.'
+        'Pesan Anda telah dikirim ke yayasanmelodikucing@gmail.com. Tim kami akan menghubungi Anda dalam 24 jam.'
       );
 
       // Reset form
@@ -65,8 +75,8 @@ export default function HubungiKamiPage() {
         subject: '',
         message: ''
       });
-    } catch (error) {
-      AlertService.error('Error', 'Gagal mengirim pesan. Silakan coba lagi.');
+    } catch (error: any) {
+      AlertService.error('Error', error.message || 'Gagal mengirim pesan. Silakan coba lagi.');
     } finally {
       setIsSubmitting(false);
     }

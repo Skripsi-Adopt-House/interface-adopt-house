@@ -106,6 +106,15 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
 
   const mainImage = pet.pictures?.[selectedImageIndex]?.url;
 
+  const handleContactOwner = () => {
+    const phoneNumber = '085772003193';
+    const petDetailUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/pets/${pet.id}`;
+    const message = `Halo, saya tertarik dengan ${pet.name}. Bisakah Anda memberi tahu saya lebih lanjut? Link: ${petDetailUrl}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/62${phoneNumber.slice(1)}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <Layout>
       <div className="container mx-auto px-4 py-12">
@@ -247,8 +256,11 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
                 >
                   {petIsFavorited ? '❤️ Disukainya' : '🤍 Tambah ke Favorit'}
                 </button>
-                <button className="w-full px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity">
-                  Hubungi Pemilik
+                <button 
+                  onClick={handleContactOwner}
+                  className="w-full px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:opacity-90 transition-opacity"
+                >
+                  💬 Hubungi Pemilik via WhatsApp
                 </button>
               </div>
             </div>
