@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
 import PetCard from '@/components/PetCard';
@@ -13,6 +13,7 @@ const ITEMS_PER_PAGE = 12;
 
 function PetsContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const searchQuery = searchParams.get('search') || '';
 
   const [pets, setPets] = useState<Pet[]>([]);
@@ -22,6 +23,17 @@ function PetsContent() {
   const [filterBreed, setFilterBreed] = useState('');
   const [filterGender, setFilterGender] = useState('');
   const [sortBy, setSortBy] = useState('newest');
+
+  const handleSearch = (value: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (value) {
+      params.set('search', value);
+    } else {
+      params.delete('search');
+    }
+    router.push(`?${params.toString()}`);
+    setCurrentPage(1);
+  };
 
   useEffect(() => {
     const fetchPets = async () => {
@@ -109,11 +121,9 @@ function PetsContent() {
                 <input
                   type="text"
                   placeholder="Nama hewan, jenis..."
-                  defaultValue={searchQuery}
+                  value={searchQuery}
                   className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                  onChange={(e) => {
-                    setCurrentPage(1);
-                  }}
+                  onChange={(e) => handleSearch(e.target.value)}
                 />
               </div>
 
