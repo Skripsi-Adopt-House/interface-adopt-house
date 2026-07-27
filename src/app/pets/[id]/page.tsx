@@ -107,7 +107,7 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
   const mainImage = pet.pictures?.[selectedImageIndex]?.url;
 
   const handleContactOwner = () => {
-    const phoneNumber = '085772003193';
+    const phoneNumber = '085772003192';
     const petDetailUrl = `${typeof window !== 'undefined' ? window.location.origin : ''}/pets/${pet.id}`;
     const message = `Halo, saya tertarik dengan ${pet.name}. Bisakah Anda memberi tahu saya lebih lanjut? Link: ${petDetailUrl}`;
     const encodedMessage = encodeURIComponent(message);
