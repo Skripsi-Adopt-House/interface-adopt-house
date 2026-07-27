@@ -52,8 +52,8 @@ export default function CreatePetPage({ params }: CreatePetPageProps) {
       newErrors.name = 'Nama hewan diperlukan';
     }
 
-    if (pictures.length !== 3) {
-      newErrors.pictures = 'Anda harus mengunggah tepat 3 foto';
+    if (pictures.length < 1 || pictures.length > 3) {
+      newErrors.pictures = 'Anda harus mengunggah minimal 1 dan maksimal 3 foto';
     }
 
     setErrors(newErrors);
@@ -293,7 +293,7 @@ export default function CreatePetPage({ params }: CreatePetPageProps) {
             {/* Pictures Upload */}
             <div className="mb-8">
               <h2 className="text-xl font-bold text-gray-900 mb-6">Foto Hewan *</h2>
-              <p className="text-sm text-gray-600 mb-4">Unggah tepat 3 foto hewan (maks 5MB masing-masing)</p>
+              <p className="text-sm text-gray-600 mb-4">Unggah 1-3 foto hewan (maks 5MB masing-masing)</p>
 
               <div className="mb-4">
                 <input
