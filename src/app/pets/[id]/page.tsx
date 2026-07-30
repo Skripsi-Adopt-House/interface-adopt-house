@@ -127,49 +127,58 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
           <span className="text-primary font-semibold">{pet.name}</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Image Gallery */}
-          <div className="lg:col-span-2">
-            <div className="mb-6">
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-96 flex items-center justify-center">
-                {mainImage ? (
+        {/* Image Gallery - Full Width */}
+        <div className="mb-12">
+          <div className="mb-6">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-96 flex items-center justify-center">
+              {mainImage ? (
+                <Image
+                  src={mainImage}
+                  alt={pet.name}
+                  fill
+                  unoptimized={true}
+                  className="object-cover"
+                />
+              ) : (
+                <div className="text-gray-400 text-lg">Tidak Ada Gambar</div>
+              )}
+            </div>
+          </div>
+
+          {/* Thumbnail Gallery */}
+          {pet.pictures && pet.pictures.length > 0 && (
+            <div className="flex gap-4 flex-wrap">
+              {pet.pictures.map((picture, index) => (
+                <button
+                  key={picture.id}
+                  onClick={() => setSelectedImageIndex(index)}
+                  className={`relative w-24 h-24 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImageIndex === index
+                      ? 'border-primary shadow-lg'
+                      : 'border-gray-300 hover:border-primary'
+                  }`}
+                >
                   <Image
-                    src={mainImage}
-                    alt={pet.name}
+                    src={picture.url}
+                    alt={`${pet.name} ${index + 1}`}
                     fill
                     unoptimized={true}
                     className="object-cover"
                   />
-                ) : (
-                  <div className="text-gray-400 text-lg">Tidak Ada Gambar</div>
-                )}
-              </div>
+                </button>
+              ))}
             </div>
+          )}
+        </div>
 
-            {/* Thumbnail Gallery */}
-            {pet.pictures && pet.pictures.length > 0 && (
-              <div className="flex gap-4 flex-wrap">
-                {pet.pictures.map((picture, index) => (
-                  <button
-                    key={picture.id}
-                    onClick={() => setSelectedImageIndex(index)}
-                    className={`relative w-24 h-24 rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImageIndex === index
-                        ? 'border-primary shadow-lg'
-                        : 'border-gray-300 hover:border-primary'
-                    }`}
-                  >
-                    <Image
-                      src={picture.url}
-                      alt={`${pet.name} ${index + 1}`}
-                      fill
-                      unoptimized={true}
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            )}
+        {/* Description & Pet Details - Side by Side */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Description Section */}
+          <div className="lg:col-span-2 bg-white rounded-2xl shadow-lg p-8 sticky top-24">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tentang {pet.name}</h2>
+            <p className="text-gray-700 leading-relaxed">
+              {pet.story || 'Belum ada deskripsi untuk hewan peliharaan ini. Hubungi pemilik untuk informasi lebih lanjut.'}
+            </p>
           </div>
 
           {/* Pet Details Card */}
@@ -266,14 +275,6 @@ export default function PetDetailPage({ params }: PetDetailPageProps) {
             </div>
           </div>
         </div>
-
-        {/* Description Section */}
-        {pet.story && (
-          <div className="mt-12 bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tentang {pet.name}</h2>
-            <p className="text-gray-700 leading-relaxed">{pet.story}</p>
-          </div>
-        )}
 
         {/* Related Pets Section */}
         <div className="mt-12">

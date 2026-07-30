@@ -17,7 +17,7 @@ export default function Home() {
     const fetchPets = async () => {
       setIsLoading(true);
       try {
-        const response = await apiService.getPets({ limit: 6, offset: 0 });
+        const response = await apiService.getPets({ limit: 4, offset: 0 });
         if (response.data) {
           setPets(response.data);
         }
@@ -92,7 +92,7 @@ export default function Home() {
         ) : pets.length > 0 ? (
           <>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
-              {pets.map((pet) => (
+              {pets.slice(0, 4).map((pet) => (
                 <div key={pet.id} className="animate-fade-in">
                   <PetCard pet={pet} />
                 </div>
